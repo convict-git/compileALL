@@ -33,7 +33,7 @@ int main(){
 	int DONE=0, lineN=1;
 	ifstream read("ls");
 	while( read >> strinp){//reads all your c file names from the file
-		cout << lineN++ << "  Compiling " << strinp<< " gcc -lm -std=c99 -O2 " << strinp << " -o " << strout(strinp);
+		cout << lineN++ << "  Compiling " << strinp<< endl << " gcc -lm -std=c99 -O2 " << strinp << " -o " << strout(strinp);
 		ostringstream gcc;
 		gcc << "gcc -lm -std=c99 -O2 "<< strinp << " -o " << strout(strinp);//compilation with optimisations
 		system(gcc.str().c_str());
